@@ -11,26 +11,28 @@ body {
     color: #333;
     line-height: 1.6;
     padding-bottom: 100px;
-    transition: background 0.5s, color 0.5s;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 h1, h2, h3 {
     font-family: 'Merriweather', serif;
     font-weight: 700;
+    color: #333;
 }
 
-/* Dark Mode */
-body.dark-mode {
-    background: #1f1f1f;
-    color: #f4f4f9;
-}
-
-h1, h2, h3 {
-    color: #007bff;
+/* Fallback for browsers not supporting fonts */
+body {
+    font-family: Arial, sans-serif;
 }
 
 p, ul, li {
     font-family: 'Roboto', sans-serif;
+}
+
+/* Dark Mode Fallback */
+body.dark-mode {
+    background: #1f1f1f;
+    color: #f4f4f9;
 }
 
 .container {
@@ -46,25 +48,18 @@ header {
     color: white;
     padding: 40px 0;
     text-align: center;
-    position: relative;
 }
 
 header h1 {
     font-size: 2.8rem;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
 
 header p {
     font-size: 1.2rem;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
 
 header .contact-info {
     margin-top: 15px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
 }
 
 header .contact-info a {
@@ -96,7 +91,7 @@ header .contact-info a:hover {
 .divider {
     width: 80%;
     margin: 0 auto;
-    height: 3px;
+    height: 2px;
     background: linear-gradient(to right, #333, #007bff);
     margin-bottom: 20px;
 }
@@ -105,58 +100,56 @@ header .contact-info a:hover {
 section {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow for cross-browser */
     padding: 30px;
     margin-bottom: 50px;
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s, transform 1s;
+    transform: translateY(30px); /* Less intense translate for older browsers */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Simplified animation */
 }
 
-/* Slide-In Animations */
+@media (prefers-reduced-motion: reduce) {
+    /* Disable animations if the user prefers reduced motion */
+    section {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Simple Animations for Cross-Browser Compatibility */
 .slide-in-left {
-    animation: slideInLeft 1s forwards;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
 .slide-in-right {
-    animation: slideInRight 1s forwards;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-@keyframes slideInLeft {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Floating Icons */
+/* Floating Icons (Subtle Movement) */
 .floating-icon {
-    animation: floating 2s infinite alternate;
+    animation: floating 3s ease-in-out infinite alternate;
 }
 
 @keyframes floating {
     from {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
     to {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
     }
 }
 
-/* Zoom-on-Hover */
+/* Hover Zoom for Projects (More Browser-Compatible) */
 .zoom-on-hover {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
 }
 
 .zoom-on-hover:hover {
-    transform: scale(1.05);
+    transform: scale(1.03); /* Slight zoom to avoid flickering */
 }
 
 /* Skill Bars */
@@ -182,11 +175,12 @@ section {
     display: block;
     height: 15px;
     border-radius: 10px;
+    background-color: #4CAF50; /* Safe color choice */
 }
 
+/* Progress Bar Colors */
 .python {
     width: 90%;
-    background-color: #4CAF50;
 }
 
 .javascript {
@@ -209,7 +203,7 @@ footer {
     width: 100%;
     bottom: 0;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 footer a {
