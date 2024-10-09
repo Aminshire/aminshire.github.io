@@ -7,33 +7,19 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
+    background: #f4f4f9;
     color: #333;
     line-height: 1.6;
-    padding-bottom: 100px; /* To prevent footer overlap */
+    padding-bottom: 100px;
 }
 
 h1, h2, h3 {
+    font-family: 'Merriweather', serif;
     font-weight: 700;
-    margin-bottom: 10px;
 }
 
-p {
-    margin: 0 0 15px;
-}
-
-ul {
-    margin: 15px 0;
-    padding-left: 20px;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+p, ul, li {
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Container */
@@ -46,14 +32,14 @@ a:hover {
 
 /* Header */
 header {
-    background-color: #007bff;
+    background-color: #333;
     color: white;
-    padding: 30px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 header p {
@@ -61,42 +47,67 @@ header p {
 }
 
 header .contact-info {
-    font-size: 1rem;
-    margin-top: 5px;
+    margin-top: 15px;
+}
+
+header .contact-info a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+header .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Section Dividers */
+.divider {
+    width: 80%;
+    margin: 0 auto;
+    height: 3px;
+    background: linear-gradient(to right, #333, #007bff);
+    margin-bottom: 20px;
 }
 
 /* Section Styling */
 section {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 50px;
 }
 
 h2 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    color: #007bff;
 }
 
-.job, .project {
-    margin-bottom: 20px;
+h2 i {
+    margin-right: 10px;
+    color: #333;
 }
 
-ul {
-    list-style-type: disc;
+ul.skills-list {
+    list-style-type: none;
+    padding: 0;
 }
 
-.date {
-    font-style: italic;
-    color: #555;
+ul.skills-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+ul.skills-list li i {
+    color: #007bff;
+    margin-right: 10px;
 }
 
 /* Footer */
 footer {
-    background-color: #007bff;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
