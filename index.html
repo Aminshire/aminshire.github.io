@@ -15,11 +15,13 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>Amin Shire</h1>
-                <p>Aspiring Bioinformatician | 1st Line Support | Cybersecurity Enthusiast</p>
-                <p class="contact-info">
+                <h1 class="fade-in">Amin Shire</h1>
+                <p class="fade-in">Aspiring Bioinformatician | 1st Line Support | Cybersecurity Enthusiast</p>
+                <p class="contact-info fade-in">
                     <a href="mailto:Amin.M.Shire@outlook.com"><i class="fas fa-envelope"></i> Amin.M.Shire@outlook.com</a> | London | <i class="fas fa-phone"></i> +44 7932617883
                 </p>
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="fade-in">Dark Mode</button>
             </div>
         </div>
     </header>
@@ -27,7 +29,7 @@
     <!-- Section Divider -->
     <div class="divider"></div>
 
-    <section id="profile" class="container">
+    <section id="profile" class="container slide-in-left">
         <h2><i class="fas fa-user"></i> Profile</h2>
         <p>
             Aspiring bioinformatician with 1 year of 1st Line Support experience, currently pursuing a Master's degree in Bioinformatics. 
@@ -39,8 +41,8 @@
     <!-- Section Divider -->
     <div class="divider"></div>
 
-    <section id="experience" class="container">
-        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+    <section id="experience" class="container slide-in-right">
+        <h2><i class="fas fa-briefcase floating-icon"></i> Work Experience</h2>
         <div class="job">
             <h3>1st Line Support - Global Net ICT</h3>
             <p class="date">Jul 2022 - Aug 2023</p>
@@ -58,13 +60,13 @@
     <div class="divider"></div>
 
     <section id="projects" class="container">
-        <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-        <div class="project">
+        <h2><i class="fas fa-project-diagram floating-icon"></i> Projects</h2>
+        <div class="project zoom-on-hover">
             <h3>Web-Based Population Genetics Analysis Tool</h3>
             <p class="date">Technologies: Python, Flask, SQL, GitHub, ADMIXTURE, JavaScript</p>
             <p>Developed a prototype web application for analyzing population genetic structures using a dataset of genetic markers from 726 individuals in Siberia, integrated with the 1000 Genomes Project.</p>
         </div>
-        <div class="project">
+        <div class="project zoom-on-hover">
             <h3>Evaluating Foundation Models on Biomedical NER</h3>
             <p class="date">Technologies: Python, Hugging Face, Transformers, TensorFlow, PyTorch</p>
             <p>Led a project evaluating transformer-based models (BERT, BioBERT, SciBERT) for biomedical Named Entity Recognition (bioNER) on biomedical texts, comparing precision, recall, and F1 scores.</p>
@@ -74,34 +76,44 @@
     <!-- Section Divider -->
     <div class="divider"></div>
 
-    <section id="skills" class="container">
-        <h2><i class="fas fa-code"></i> Skills</h2>
-        <ul class="skills-list">
-            <li><i class="fas fa-laptop-code"></i> <strong>Programming:</strong> Python, JavaScript, PowerShell</li>
-            <li><i class="fas fa-server"></i> <strong>Operating Systems:</strong> Windows, macOS, Linux</li>
-            <li><i class="fas fa-cloud"></i> <strong>Cloud Services:</strong> Microsoft Azure, AWS</li>
-            <li><i class="fas fa-tools"></i> <strong>Tools:</strong> Kali Linux, nmap, burpsuite, Active Directory</li>
-            <li><i class="fas fa-network-wired"></i> <strong>Virtual Environments:</strong> Hyper-V, VMware</li>
-        </ul>
+    <section id="skills" class="container slide-in-left">
+        <h2><i class="fas fa-code floating-icon"></i> Skills</h2>
+        <div class="skill-bars">
+            <div class="skill">
+                <p>Python</p>
+                <div class="bar"><span class="progress python"></span></div>
+            </div>
+            <div class="skill">
+                <p>JavaScript</p>
+                <div class="bar"><span class="progress javascript"></span></div>
+            </div>
+            <div class="skill">
+                <p>PowerShell</p>
+                <div class="bar"><span class="progress powershell"></span></div>
+            </div>
+        </div>
     </section>
 
     <!-- Section Divider -->
     <div class="divider"></div>
 
-    <section id="education" class="container">
-        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+    <section id="education" class="container slide-in-right">
+        <h2><i class="fas fa-graduation-cap floating-icon"></i> Education</h2>
         <p><strong>MSc Bioinformatics</strong>, Queen Mary University of London, 2023 - Present</p>
         <p><strong>BSc Biochemistry</strong>, Queen Mary University of London, 2019 - 2022</p>
         <p><strong>Cybersecurity Bootcamp</strong>, HyperionDev, 2023</p>
     </section>
 
     <footer>
-        <div class="container">
+        <div class="container fade-in">
             <p>Certifications: 
                 <a href="https://www.credly.com/badges/1f3c064e-e8e2-45c4-b67f-ceff44831ff0/public_url"><i class="fas fa-certificate"></i> AWS Certified Solutions Architect</a> | 
                 <a href="https://www.hyperiondev.com/certificate/2146/certificate-of-completion?intent=view"><i class="fas fa-certificate"></i> Cybersecurity Bootcamp</a>
             </p>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

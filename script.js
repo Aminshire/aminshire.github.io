@@ -1,11 +1,27 @@
-// Example: Toggle the visibility of the "Experience" section
-document.addEventListener('DOMContentLoaded', function () {
-    const experienceSection = document.getElementById('experience');
-    const toggleButton = document.createElement('button');
-    toggleButton.textContent = "Toggle Experience";
-    document.body.insertBefore(toggleButton, experienceSection);
-    
-    toggleButton.addEventListener('click', function () {
-        experienceSection.style.display = experienceSection.style.display === 'none' ? 'block' : 'none';
+// Theme Toggle (Light/Dark Mode)
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    themeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+});
+
+// Scroll-triggered animations
+const sections = document.querySelectorAll('section');
+const footer = document.querySelector('footer');
+
+window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+        if (sectionTop < screenHeight - 50) {
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+        }
     });
+
+    // Show footer on scroll
+    const footerTop = footer.getBoundingClientRect().top;
+    if (footerTop < window.innerHeight) {
+        footer.style.opacity = '1';
+    }
 });
