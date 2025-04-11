@@ -80,7 +80,7 @@ const CVDocument = () => (
         <Text style={styles.title}>Amin Shire</Text>
         <Text style={styles.subtitle}>Bioinformatician | Software Developer | IT Support</Text>
         <Text style={styles.contact}>Amin.M.Shire@outlook.com • +44 7932617883 • London</Text>
-        <Text style={styles.contact}>LinkedIn: linkedin.com/in/aminshire</Text>
+        <Text style={styles.contact}>LinkedIn: linkedin.com/in/aminshire Portfolio: aminshire.github.io</Text>
       </View>
 
       {/* Projects Section */}
